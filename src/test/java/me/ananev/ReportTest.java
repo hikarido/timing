@@ -5,8 +5,6 @@ import org.testng.annotations.Test;
 import java.time.LocalTime;
 import java.util.List;
 
-import static org.testng.Assert.*;
-
 /**
  * TODO javadoc
  *
@@ -20,7 +18,9 @@ public class ReportTest {
                 new ReportRecord(1, LocalTime.parse("11:00"), "inbox"),
                 new ReportRecord(2, LocalTime.parse("11:10"), "ID-1754"),
                 new ReportRecord(3, LocalTime.parse("12:00"), "daily"),
-                new ReportRecord(4, LocalTime.parse("12:39"), "daily"));
+                new ReportRecord(4, LocalTime.parse("12:39"), "daily"),
+                new ReportRecord(5, LocalTime.parse("12:44"), "break"),
+                new ReportRecord(5, LocalTime.parse("12:49"), "break"));
         new Report(expectedRecords).printTasksTiming();
     }
 }

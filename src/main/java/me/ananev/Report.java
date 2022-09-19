@@ -36,5 +36,6 @@ public class Report {
         Duration wholeTime = map.entrySet().stream().map(Map.Entry::getValue)
                 .reduce((duration, duration2) -> duration.plus(duration2)).orElseThrow();
         System.out.println("WholeTime: " + wholeTime);
+        System.out.println("WorkTime:" + wholeTime.minus(map.get("break")));
     }
 }
